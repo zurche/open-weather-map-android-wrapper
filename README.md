@@ -29,6 +29,7 @@ The wrapper currently supports the following endpoints of OpenWeatherMap API:
 * 5 Day Forecast (https://openweathermap.org/forecast5)
 * Current Weather (https://openweathermap.org/current)
 
+## OWService setup
 To use the API you need a valid OpenWeatherMap token afterwards you can create your API object and start working with it:
 ```java
 private OWService mOWService = new OWService("<YOUR TOKEN GOES HERE>");
@@ -40,6 +41,7 @@ mOWService.setLanguage(getActivity().getResources().getConfiguration().locale);
 mOWService.setMetricUnits(OWSupportedUnits.METRIC);
 ```
 
+## five-day forecast
 To retrieve 5 Days Forecast the library populates the [ExtendedWeather](https://github.com/zurche/open-weather-map-android-wrapper/blob/master/OWApi/src/main/java/az/openweatherapi/model/gson/five_day/ExtendedWeather.java) object with the retrieved information. To set the location you need to get the weather forecast create a Coor object with the desired Lat/Lon value:
 ```java
 Coord coordinate = new Coord();
@@ -60,6 +62,7 @@ mOWService.getFiveDayForecast(coordinate, new OWRequestListener<ExtendedWeather>
   });
 ```
 
+## current-day forecast
 To get the current day forecast you also need to send the Coord object with the Lat/Lon pair of the location to retrieve the weather from and the library will respond with a [CurrentWeather](https://github.com/zurche/open-weather-map-android-wrapper/blob/master/OWApi/src/main/java/az/openweatherapi/model/gson/current_day/CurrentWeather.java) object populated with the temperature information:
 ```java
 Coord coordinate = new Coord();
@@ -79,6 +82,7 @@ mOWService.getCurrentDayForecast(coordinate, new OWRequestListener<CurrentWeathe
     }
 });
 ```
+
 
 License
 --------
