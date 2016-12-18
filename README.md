@@ -29,6 +29,7 @@ The wrapper currently supports the following endpoints of OpenWeatherMap API:
 * 5 Day Forecast (https://openweathermap.org/forecast5)
 * Current Weather (https://openweathermap.org/current)
 
+
 ## OWService setup
 To use the API you need a valid OpenWeatherMap token afterwards you can create your API object and start working with it:
 ```java
