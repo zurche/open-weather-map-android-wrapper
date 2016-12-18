@@ -1,5 +1,5 @@
 # open-weather-map-android-wrapper [![Release](https://jitpack.io/v/zurche/open-weather-map-android-wrapper.svg)](https://jitpack.io/#zurche/open-weather-map-android-wrapper/v0.1) [![Method Count](https://img.shields.io/badge/Methods and size-79 | 39 KB-e91e63.svg)](http://www.methodscount.com/?lib=com.github.zurche%3Aopen-weather-map-android-wrapper%3Av0.1) 
-An un-official API wrapper of OpenWeatherMap.org for Android made with Retrofit 2.0
+Non-official API wrapper of OpenWeatherMap.org for Android made with Retrofit 2.0
 
 Add to your project build.gradle
 ```gradle
