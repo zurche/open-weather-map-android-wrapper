@@ -31,12 +31,12 @@ The wrapper currently supports the following endpoints of OpenWeatherMap API:
 
 
 ## OWService setup
-To use the API you need a valid OpenWeatherMap token afterwards you can create your API object and start working with it:
+To use the API you need a valid [OpenWeatherMap API KEY](http://openweathermap.org/appid), once you get it you are able to setup and create your OWService object:
 ```java
-private OWService mOWService = new OWService("<YOUR TOKEN GOES HERE>");
+private OWService mOWService = new OWService("<YOUR API KEY GOES HERE>");
 ```
 
-Once your service object is created you can configure it with the desired language and metric units in which you need the forecast temperatures retrieved:
+You can configure it with the desired language and metric units in which you need the forecast temperatures retrieved:
 ```java
 mOWService.setLanguage(getActivity().getResources().getConfiguration().locale);
 mOWService.setMetricUnits(OWSupportedUnits.METRIC);
