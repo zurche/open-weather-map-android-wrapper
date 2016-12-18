@@ -40,7 +40,7 @@ mOWService.setLanguage(getActivity().getResources().getConfiguration().locale);
 mOWService.setMetricUnits(OWSupportedUnits.METRIC);
 ```
 
-To retrieve 5 Days Forecast the library populates the ExtendedWeather object with the retrieved information. To set the location you need to get the weather forecast create a Coor object with the desired Lat/Lon value:
+To retrieve 5 Days Forecast the library populates the [ExtendedWeather](https://github.com/zurche/open-weather-map-android-wrapper/blob/master/OWApi/src/main/java/az/openweatherapi/model/gson/five_day/ExtendedWeather.java) object with the retrieved information. To set the location you need to get the weather forecast create a Coor object with the desired Lat/Lon value:
 ```java
 Coord coordinate = new Coord();
 coordinate.setLat(-31.42);
@@ -60,7 +60,7 @@ mOWService.getFiveDayForecast(coordinate, new OWRequestListener<ExtendedWeather>
   });
 ```
 
-To get the current day forecast you also need to send the Coord object with the Lat/Lon pair of the location to retrieve the weather from and the library will respond with a CurrentForecast object populated with the temperature information:
+To get the current day forecast you also need to send the Coord object with the Lat/Lon pair of the location to retrieve the weather from and the library will respond with a [CurrentWeather](https://github.com/zurche/open-weather-map-android-wrapper/blob/master/OWApi/src/main/java/az/openweatherapi/model/gson/current_day/CurrentWeather.java) object populated with the temperature information:
 ```java
 Coord coordinate = new Coord();
 coordinate.setLat(-31.42);
